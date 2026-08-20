@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "path": "home",
+    "title": "Sample Wiki Home",
+    "description": "Landing page for the sample export.",
+    "editorKey": "markdown",
+    "contentType": "markdown",
+    "localeCode": "en",
+    "isPublished": true,
+    "isPrivate": false,
+    "tags": ["sample", "index"],
+    "createdAt": "2026-01-05T09:00:00.000Z",
+    "updatedAt": "2026-01-05T09:00:00.000Z",
+    "content": "# Sample Wiki Home\n\nThis page exists so you can dry-run `migrate_wikijs.py` without\ntouching a real export.\n\n- [Installation](/guides/installation)\n- [Troubleshooting](/guides/troubleshooting)\n"
+  },
+  {
+    "id": 2,
+    "path": "guides/installation",
+    "title": "Installation",
+    "description": "How the sample project gets installed.",
+    "editorKey": "markdown",
+    "contentType": "markdown",
+    "localeCode": "en",
+    "isPublished": true,
+    "isPrivate": false,
+    "tags": [
+      { "id": 1, "tag": "sample" },
+      { "id": 2, "tag": "guide" }
+    ],
+    "createdAt": "2026-01-05T09:05:00.000Z",
+    "updatedAt": "2026-01-06T14:20:00.000Z",
+    "content": "# Installation\n\n```bash\nsudo apt update\nsudo apt install sample-package\n```\n\nNote the `tags` field on this page uses the object form\n(`{\"tag\": \"...\"}`) while the home page uses plain strings — real\nWiki.js exports contain both, and the script normalises them.\n"
+  },
+  {
+    "id": 3,
+    "path": "guides/troubleshooting",
+    "title": "Troubleshooting",
+    "description": "Common problems with the sample project.",
+    "editorKey": "markdown",
+    "contentType": "markdown",
+    "localeCode": "en",
+    "isPublished": false,
+    "isPrivate": false,
+    "tags": [],
+    "createdAt": "2026-01-07T11:30:00.000Z",
+    "updatedAt": "2026-01-07T11:30:00.000Z",
+    "content": "# Troubleshooting\n\nThis page is unpublished (`isPublished: false`) so you can confirm\nthat draft status survives the migration.\n\n| Symptom | Fix |\n| --- | --- |\n| Service will not start | Check the unit log |\n| Port already in use | Stop the conflicting service |\n"
+  }
+]

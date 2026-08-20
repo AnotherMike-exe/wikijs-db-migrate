@@ -1,0 +1,25 @@
+# Real wiki exports — these contain your actual page content and must never
+# be committed. Only the pages.sample.* fixtures belong in git.
+pages.json
+pages.json.gz
+*.json.gz
+!pages.sample.json.gz
+export/
+exports/
+
+# Local config, which may hold an API token
+config.toml
+
+# Environment files
+.env
+.env.*
+
+# Python / uv
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS cruft
+.DS_Store
+Thumbs.db

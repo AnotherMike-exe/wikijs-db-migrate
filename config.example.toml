@@ -1,0 +1,35 @@
+# Copy to config.toml and edit. config.toml is gitignored.
+#   cp config.example.toml config.toml
+#
+# Every key here can also be set as an environment variable (WIKIJS_URL,
+# WIKIJS_EXPORT, ...) or as a CLI flag (--url, --export, ...).
+# Precedence: CLI flag > env var > this file > built-in default.
+
+# Base URL of the wiki you are migrating INTO. No trailing slash.
+# The script appends /graphql itself.
+url = "https://wiki.example.com"
+
+# Path to the export dump. Gzipped or plain JSON — the script detects which.
+export = "./pages.json.gz"
+
+# Seconds to pause between page creations. Be kind to the server.
+delay = 0.3
+
+# Per-request HTTP timeout, in seconds.
+timeout = 30
+
+# Skip pages whose path already exists on the target, making re-runs safe
+# after a partial migration.
+skip_existing = true
+
+# Runs are dry by default. Set this to false — or pass --live — to write.
+dry_run = true
+
+# NOTE: there is deliberately no `token` key here.
+# Put your API token in the environment instead, so it can never be committed:
+#
+#     export WIKIJS_TOKEN="your-token-here"
+#
+# The script does accept `token = "..."` in config.toml if you insist, but
+# config.toml is gitignored for exactly this reason. Treat the token as a
+# password — it is a full-access admin credential.
