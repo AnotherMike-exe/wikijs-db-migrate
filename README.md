@@ -167,4 +167,4 @@ fields are read; anything else in the export is ignored:
 
 ---
 
-MIT licence, no warranty. Dry-run it, and back up the target database first.
+Licensed under the [MIT Licence](LICENSE), with no warranty. Dry-run it, and back up the target database first.
